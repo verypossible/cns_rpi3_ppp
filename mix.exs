@@ -1,7 +1,7 @@
-defmodule NervesSystemRpi3.MixProject do
+defmodule CNSRpi3PPP.MixProject do
   use Mix.Project
 
-  @app :nerves_system_rpi3
+  @app :cns_rpi3_ppp
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
            |> String.trim()
@@ -34,9 +34,9 @@ defmodule NervesSystemRpi3.MixProject do
   defp nerves_package do
     [
       type: :system,
-      artifact_sites: [
-        {:github_releases, "nerves-project/#{@app}"}
-      ],
+      # artifact_sites: [
+      #   {:github_releases, "nerves-project/#{@app}"}
+      # ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
       platform_config: [
@@ -58,16 +58,16 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp description do
     """
-    Nerves System - Raspberry Pi 3 B / B+
+    PPP - Raspberry Pi 3 B / B+
     """
   end
 
   defp package do
     [
-      maintainers: ["Frank Hunleth", "Justin Schneck"],
+      maintainers: ["Very"],
       files: package_files(),
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/nerves-project/#{@app}"}
+      links: %{"GitHub" => "https://github.com/verypossible/#{@app}"}
     ]
   end
 

@@ -1,0 +1,4 @@
+# facilitate cellular below
+CONFIG_MKNOD=y
+CONFIG_WC=y
+# facilitate cellular above
